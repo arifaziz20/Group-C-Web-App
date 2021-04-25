@@ -34,9 +34,9 @@ Pc part
   3- To help user eliminate some choice that are not relevant for them.  
  
 <h2> Features and functionalities of the proposed web application. </h2>
-  Navigation bar - navigate user through the web  
-  Computer parts finder based on budget - to search set of pc parts that can be purchased within the budget  
-  Slideshow/carousel - to show related picture of pc parts  
+  Navigation bar - navigate user through the web   
+  Computer parts finder based on budget - to search set of pc parts that can be purchased within the budget   
+  Slideshow/carousel - to show related picture of pc parts   
   
 <h2> Properly define the views, controllers, routes and models. Include ERD for your    
 database tables with one-to-many relationship. </h2>
