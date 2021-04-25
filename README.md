@@ -15,10 +15,10 @@ Muhammad Ilham Hakimi bin Mohamad Nizam - 1914359
 <h2> Computer Parts for Noobies </h2>
 
 Pc part
-  tunjuk pc part
-  recommend pc part based on user budget
-  recommed pc based on type (school/gaming/kerja/design/productivity)
-  bole refer- user benchmark
+  tunjuk pc part  
+  recommend pc part based on user budget  
+  recommed pc based on type (school/gaming/kerja/design/productivity)  
+  bole refer- user benchmark  
 
 (backup) Waqf application/Food sadaqah 
   donator
