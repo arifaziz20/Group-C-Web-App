@@ -135,5 +135,5 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
 
 
 <h2> References.  </h2>
-_Pick parts. Build your PC. Compare and share. (2021). Pcpartpicker.com; PCPartPicker. https://pcpartpicker.com/_
+_Pick parts. Build your PC. Compare and share. (2021). Pcpartpicker.com; PCPartPicker._ https://pcpartpicker.com/
 
