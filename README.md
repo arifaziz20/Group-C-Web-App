@@ -168,12 +168,12 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
 
   
   <h3>ER Diagram<h3>
-<img src = "">
+<img src = "images/ERD- PCpart.jpg">
 <br>
  
   
 
-<h2> A sequence diagram to represent the interaction of the proposed web application.</h2>
+<h2> Sequence Diagram.</h2>
 
 <img src = "images/Guest_sqdgram.jpg">
 <br>
