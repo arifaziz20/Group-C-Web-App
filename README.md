@@ -168,8 +168,9 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
 
   
   <h3>ER Diagram<h3>
- Properly define the views, controllers, routes and models. Include ERD for your 
- database tables with one-to-many relationship. 
+<img src = "">
+<br>
+ 
   
 
 <h2> A sequence diagram to represent the interaction of the proposed web application.</h2>
@@ -177,7 +178,11 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
 <img src = "images/Guest_sqdgram.jpg">
 <br>
 
+<img src = "images/User_sqdgram.jpg">
+<br>
 
+<img src = "images/Admin_sqdgram.jpg">
+<br>
 
 <h2> References.  </h2>
 <ol>
