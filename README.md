@@ -12,7 +12,7 @@ Amirul Afiq bin Shahdan - 1916491
 Muhammad Akmal bin Anuar - 1911967  
 Muhammad Ilham Hakimi bin Mohamad Nizam - 1914359  
 
-<h2>Title: Computer Parts for Noobies </h2>
+<h2>Title: Computer Parts for Beginners </h2>
 
 <h2> Introduction of the proposed web application. </h2>
 Nowadays, users are overwhelmed by variety option of computer parts to be chosen. Aside from that, some people are not that expert in determining the best computer parts to build their dreamed PC. Thus, our web application offers a solution where users can see what they get for their budget range. Our project concerning on  developing a web application that summarize the collection of PC parts that can be afforded by the users.  In our web application, we have three sections which is PC Builder, Popular Preset and PC Part Info. Our web application also provide details for computer parts which mainly focus on main components. For registered user, they can have the option to create preset by selecting combination of computer parts. Furthermore, user can enter their budget range and the system will calculate it and suggest the best preset available in our records.
