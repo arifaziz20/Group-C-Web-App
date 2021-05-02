@@ -173,7 +173,7 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
   
 
 <h2> A sequence diagram to represent the interaction of the proposed web application.</h2>
-https://github.com/arifaziz20/Group-C-Web-App/blob/main/Guest_sqdgram.jpg
+![](Guest_sqdgram.jpg)
 
 <h2> References.  </h2>
 <ol>
