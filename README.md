@@ -70,13 +70,54 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
   <h3>Models (Database)</h3>
   
   - User (including Admin)
+    ->username
+    ->password
+    ->user type    
   - Cpu
+    ->model name
+    ->manufacturer
+    ->price
   - Ram
+    ->name
+    ->speed
+    ->module
+    ->price  
   - Gpu
+    ->name
+    ->chipset
+    ->vram
+    ->memory type
+    ->length
+    ->price
   - Storage
+    ->name
+    ->capacity
+    ->price
+    ->type
+    ->form factor
   - Motherboard
+    ->name
+    ->socket
+    ->form factor
+    ->memory max
+    ->memory type
+    ->memory slot
+    ->price
   - Psu (Power supply unit)
+    ->name
+    ->form factor
+    ->wattage
+    ->efficiency rating
+    ->modular
+    ->price
   - Preset
+    ->cpu
+    ->ram
+    ->storage
+    ->gpu
+    ->psu
+    ->motherboard
+    ->total price
 
   <h3>Controllers</h3>
   
