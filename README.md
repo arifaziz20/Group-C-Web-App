@@ -1,8 +1,7 @@
-# Group-C-Web-App
+# Group C
 
-Part 1 Proposal + Mock-up + 
-YouTube Presentation
-5%
+<h1> INFO 3305 WEB APPLICATION DEVELOPMENT SECTION 3</h1>
+YOUTUBE LINK: 
 
 <h2> Group Members.</h2>
 
