@@ -1,7 +1,7 @@
 # Group C
 
 <h1> INFO 3305 WEB APPLICATION DEVELOPMENT SECTION 3</h1>
-YOUTUBE LINK: 
+YOUTUBE LINK: https://youtu.be/NpXhao76C1k
 
 <h2> Group Members.</h2>
 
