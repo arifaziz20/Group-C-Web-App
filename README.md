@@ -70,54 +70,70 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
   <h3>Models (Database)</h3>
   
   - User (including Admin)
-    ->username
-    ->password
-    ->user type    
+    <ul>
+    <li>username</li>
+    <li>password</li>
+    <li>user type</li>    
+    </ul>
   - Cpu
-    ->model name
-    ->manufacturer
-    ->price
+    <ul>
+    <li>model name</li>
+    <li>manufacturer</li>
+    <li>price</li>
+    </ul>
   - Ram
-    ->name
-    ->speed
-    ->module
-    ->price  
+    <ul>
+    <li>name</li>
+    <li>speed</li>
+    <li>module</li>
+    <li>price</li>
+    </ul>
   - Gpu
-    ->name
-    ->chipset
-    ->vram
-    ->memory type
-    ->length
-    ->price
+    <ul>
+    <li>name</li>
+    <li>chipset</li>
+    <li>vram</li>
+    <li>memory type</li>
+    <li>length</li>
+    <li>price</li>
+    </ul>
   - Storage
-    ->name
-    ->capacity
-    ->price
-    ->type
-    ->form factor
+    <ul>
+    <li>name</li>
+    <li>capacity</li>
+    <li>price</li>
+    <li>type</li>
+    <li>form factor</li>
+    </ul>
   - Motherboard
-    ->name
-    ->socket
-    ->form factor
-    ->memory max
-    ->memory type
-    ->memory slot
-    ->price
+    <ul>
+    <li>name</li>
+    <li>socket</li>
+    <li>form factor</li>
+    <li>memory max</li>
+    <li>memory type</li>
+    <li>memory slot</li>
+    <li>price</li>
+    </ul>
   - Psu (Power supply unit)
-    ->name
-    ->form factor
-    ->wattage
-    ->efficiency rating
-    ->modular
-    ->price
+    <ul>
+    <li>name</li>
+    <li>form factor</li>
+    <li>wattage</li>
+    <li>efficiency rating</li>
+    <li>modular</li>
+    <li>price</li>
+    </ul>
   - Preset
-    ->cpu
-    ->ram
-    ->storage
-    ->gpu
-    ->psu
-    ->motherboard
-    ->total price
+    <ul>
+    <li>cpu</li>
+    <li>ram</li>
+    <li>storage</li>
+    <li>gpu</li>
+    <li>psu</li>
+    <li>motherboard</li>
+    <li>total price</li>
+    </ul>
 
   <h3>Controllers</h3>
   
