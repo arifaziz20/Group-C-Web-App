@@ -183,7 +183,7 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
 
   
   <h3>ER Diagram<h3>
-<img src = "images/ERD- PCpart.jpg">
+<img src = "images/erd-revamped.png">
 <br>
  
   
