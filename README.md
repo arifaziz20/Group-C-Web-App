@@ -165,21 +165,26 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
   - "/component/storage" return view component storage
   - "/component/psu" return view component psu
   - "/pc-parts-info" return view pc parts info
-  - "/admin" return view admin
-  - "/admin/adduser" return view admin_adduser
-  - "/admin/edituser" return view admin_edituser
-  - "/component/cpu/add" return view cpu_add
-  - "/component/ram/add" return view ram_add
-  - "/component/gpu/add" return view gpu_add
-  - "/component/motherboard/add" return view mb_add
-  - "/component/storage/add" return view strg_add
-  - "/component/psu/add" return view psu_add
-  - "/component/cpu/edit" return view cpu_edit
-  - "/component/ram/edit" return view ram_edit
-  - "/component/gpu/edit" return view gpu_edit
-  - "/component/motherboard/edit" return view mb_edit
-  - "/component/storage/edit" return view strg_edit
-  - "/component/psu/edit" return view psu_edit
+  - "/Userrecord" return view user records list
+  - "/Userrecord/editrole" return view edit role for a user
+  - "/CPUrecord" return view cpu records list
+  - "/CPUrecord/edit" return view edit a cpu record
+  - "/CPUrecord/create" return view create a new cpu record
+  - "/RAMrecord" return view ram records list
+  - "/RAMrecord/edit" return view edit a ram record
+  - "/RAMrecord/create" return view create a new ram record
+  - "/GPUrecord" return view gpu records list
+  - "/GPUrecord/edit" return view edit a gpu record
+  - "/GPUrecord/create" return view create a new gpu record
+  - "/PSUrecord" return view psu records list
+  - "/PSUrecord/edit" return view edit a psu record
+  - "/PSUrecord/create" return view create a new psu record
+  - "/Motherboardrecord" return view motherboard records list 
+  - "/Motherboardrecord/edit" return view edit a motherboard record
+  - "/Motherboardrecord/create" return view create a new motherboard record
+  - "/Storagerecord" return view storage records list
+  - "/Storagerecord/edit" return view edit a storage record
+  - "/Storagerecord/create" return view create a new storage record
 
   
   <h3>ER Diagram<h3>
