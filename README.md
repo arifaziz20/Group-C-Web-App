@@ -199,6 +199,62 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
 <img src = "images/Admin_sqdgram.jpg">
 <br>
 
+<h2> Project System Captured Screen</h2>
+ 
+<br>
+ 
+<h2> Sequence Diagram.</h2>
+ <ol>
+  <li><h3>Home Page<h3></li>
+   <img>
+   <p> </p>
+   <br>
+  <li><h3>Login Page<h3></li>
+   <img>
+   <p> </p>
+   <br>
+  <li><h3>Register Page<h3></li>
+   <img>
+   <p> </p>
+   <br>
+  <li><h3>PC Builder Page<h3></li>
+   <img>
+   <p> </p>
+   <br>
+  <li><h3>Popular Preset<h3></li>
+   <img>
+   <p> </p>
+   <br>
+  <li><h3>PC Parts Info<h3></li>
+   <img>
+   <p> </p>
+   <br>
+  <li><h3>Components<h3></li>
+   <img>
+   <p> </p>
+   <br>
+  <li><h3>Admin View Records<h3></li>
+   <img>
+   <p> </p>
+   <br>
+  <li><h3>Admin Edit Records<h3></li>
+   <img>
+   <p> </p>
+   <br>
+  <li><h3>Admin Create New Records<h3></li>
+   <img>
+   <p> </p>
+   <br>
+ </ol>
+   
+<h2>Challenges and Difficulties in Developing the Application</h2>
+<ol>
+ <li> </li>
+ <li> </li>
+ <li> </li>
+</ol>
+   <br>
+   
 <h2> References.  </h2>
 <ol>
   <li>Pick parts. Build your PC. Compare and share. (2021). Pcpartpicker.com; PCPartPicker. https://pcpartpicker.com/</li>
