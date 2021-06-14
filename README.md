@@ -207,8 +207,6 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
 <h2> Project System Captured Screen</h2>
  
 <br>
- 
-<h2> Sequence Diagram.</h2>
  <ol>
   <li><h3>Home Page<h3></li>
    <img>
