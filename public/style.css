@@ -1,0 +1,575 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,300&display=swap" rel="stylesheet">
+
+
+/*Color scheme:
+White Baby Powder: #FFFFF9
+Blue Zaffre: #000AA0
+Rich Black Fedor: #0D1317
+Orange Mandarin: #EF8354
+Green Polished Pine: #6BAB90
+*/
+
+* {
+  font-family: arial, sans-serif;
+  background-color: #F5F5F5;
+}
+
+hr.hrbawhcomppartfornewbies {
+    height: 2px;
+    border-width: 0;
+    color: turquoise;
+    background-color: black;
+}
+
+body {
+  margin: 0 auto;
+  /* width: 1349px;
+  max-width: 1349px; */
+}
+
+h3 {
+  font: bold 2em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 700;
+  color: #3A3A3A;
+  margin: 10px auto;
+}
+
+p {
+  font: normal 1em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 300;
+  color: #888;
+}
+
+ul.menu {
+  position: sticky;
+  top: 0;
+  list-style-type: none;
+  width: 649px;
+  margin: auto;
+  position: sticky;
+  padding: 20px 10px 40px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+ul.menu li {
+  float: left;
+}
+
+ul.menu li a {
+  padding: 8px;
+  background-color: #0D1317;
+  font: normal 1em 'Source Sans Pro light 300', Arial, sans-serif;
+  color: #FFFFF9;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+
+}
+
+ul.menu li a:hover  {
+  background-color: #000AA0;
+  padding: 10px 10px;
+}
+
+#clickedLink {
+  margin: 0px;
+  padding: 10px 10px;
+  background-color: #000AA0;
+}
+
+h1.webTitle {
+  font: bold 3.5em 'Source Sans Pro', Arial, sans-serif;
+  color: white;
+  /* margin: 10px auto 10px; */
+  margin: 50px auto 50px;
+  text-align: center;
+}
+
+p.introText {
+  font: normal 1em 'Source Sans Pro light 300', Arial, sans-serif;
+  /* color: #888888; */
+  color: white;
+  margin: 25px auto 50px;
+  text-align: center;
+}
+
+hr {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 80%;
+  color: #000;
+}
+
+div.textBox {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+div.textBox2 {
+  display:block;
+  float:none;
+  position:relative;
+  left:128px;
+  padding:0px;
+  width:80%;
+  text-align:center;
+  margin: 100px 0px 40px 0px;
+  border:2px solid #777;
+  border-radius: 10px;
+}
+
+div.textBox h3 {
+  font: bold 3em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 700;
+  /* color: #3A3A3A; */
+  color: white;
+  margin: 10px auto;
+}
+
+div.textBox2 h3 {
+  font: bold 3em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 700;
+  color: white;
+  /* color: #3A3A3A; */
+  margin: 10px auto;
+}
+
+div.textBox p {
+  font: bold 1.7em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 700;
+  /* color: #888; */
+  color: antiquewhite;
+  margin: 7px auto;
+}
+
+div.textBox2 p {
+  font: bold 1.3em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 300;
+  color: #000;
+  margin: 7px auto;
+}
+.setlist tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.setlist tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.setlist tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.setlist thead {
+  background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.setlist td {
+  padding: 12px 15px;
+}
+
+.setlist  {
+  padding: 20px;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+<<<<<<< HEAD
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+
+#top{
+  display:none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+#top:hover{
+  background-color: #555;
+}
+
+.collapsible {
+  background-color: #010101;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 20px 40px;
+  width: 100%;
+  border: 1px solid black;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-radius: 15px 50px 50px 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #2f2e2e;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 50px 0 50px;
+  background-color: #ffffff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font: bold 1.3em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 300;
+  border-radius: 15px 50px 80px 80px;
+}
+
+div.content li  {
+    padding: 20px;
+}
+
+.collapsible:after {
+  content: "\2796"; /* Unicode character for "plus" sign (+) */
+  font-size: 17px;
+  color: white;
+  float: right;
+  margin: 5px 20px 0;
+}
+
+.active:after {
+  content: '\02795'; /* Unicode character for "minus" sign (-) */
+}
+
+.clickables{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 365px;
+  font-size: 20px;
+}
+
+.clickables a {
+  font: normal 1em 'Source Sans Pro light 300', Arial, sans-serif;
+  margin: auto;
+  display: inline-block;
+  background-color: #222222;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  padding: 8px 20px;
+  width: 110px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.perititle{
+  font-size: 40px;
+}
+
+footer  {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  background-color: #0D1317;
+  color: #fff700;
+  padding-top: 10px;
+}
+
+footer h3, footer p {
+  color: #FFFFF9;
+}
+
+=======
+div.textBox2 p {
+  font: normal 1.3em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 300;
+  color: #000;
+  margin: 7px auto;
+}
+
+div.names p {
+  font:bold 2em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 700;
+  color: #3A3A3A;
+  margin:0;
+  display: block;
+  position: relative;
+  float: right;
+}
+
+div.buttons {
+  font: bold 2.5em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 700;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  color: #888;
+  background-color: #DDD;
+  display: block;
+  float: right;
+  position: relative;
+  border: 2px solid #888;
+  border-radius: 6px;
+  top: 130px;
+}
+
+div.verticalBox {
+  display: block;
+  position: relative;
+  margin:0;
+  width:340px;
+  height:1800px;
+  /* border: 2px solid #000;
+  border-radius:10px; */
+}
+
+div.imageBox {
+  display: block;
+  position: relative;
+  width:300px;
+  height:300px;
+  /* border: 2px solid #777;
+  border-radius:10px; */
+  margin:30px auto 0px;
+}
+
+div.verticalBox h3 {
+  text-align: center;
+}
+
+div.verticalBox p {
+  font: bold 1.3em 'Source Sans Pro', Arial, sans-serif;
+  font-weight: 700;
+  color: #888;
+  margin: 7px auto;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/*maincomponents */
+
+p.MC_info {
+  font: normal 1em 'Source Sans Pro light 300', Arial, sans-serif;
+  /* color: #3E3F3E; */
+  color: white;
+  line-height: 150%;
+}
+
+.readMore_container {
+  display: flex;
+  flex-direction: column;
+  color: #111;
+  gap: 1rem;
+}
+
+.extendBtn {
+  font: normal 1em 'Source Sans Pro light 300', Arial, sans-serif;
+  margin-top: 30px;
+  display: block;
+  background-color: darkgrey;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  width: 80px;
+}
+
+.extendBtn:hover{
+  background-color: rgb(102, 152, 209);
+}
+
+.moreText {
+  display: none;
+}
+
+.moreText_show{
+  display: inline;
+}
+
+h1.compoTitle {
+  font: bold 2.5em 'Source Sans Pro bold 700', Arial, sans-serif;
+  color: navajowhite;
+
+}
+
+h2.subTitle {
+  font: bold 1.5em 'Source Sans Pro bold 700', Arial, sans-serif;
+  color: sandybrown;
+}
+
+.MC_column {
+  float: left;
+  width: 43%;
+  padding: 25px 30px 25px 30px;
+}
+
+.MC_row {
+  width: 70%;
+  margin: 0 auto;
+}
+.MC_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 40%;
+  position: relative;
+  margin: auto;
+  padding-top: 10px;
+  height: 380px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  margin: auto;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 25px;
+  margin-top: 20px;
+  padding: 16px 10px 16px 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Caption text */
+.text {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+  text-align: center;
+}
+
+.text p {
+  font: bold 1.5em 'Source Sans Pro bold 700', Arial, sans-serif;
+  /* color: #404040; */
+  color: white;
+  padding: 10px;
+}
+
+.text a{
+  text-decoration: none;
+  font: normal 1em 'Source Sans Pro light 300', Arial, sans-serif;
+  margin: auto;
+  display: block;
+  background-color: darkgrey;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  padding: 8px 20px;
+  width: 80px;
+}
+
+.text a:hover
+{
+  background-color:rgb(102, 152, 209);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+img.cardImage{
+  display: block;
+  margin: auto;
+}
+
+/*maincomponents*/
+>>>>>>> 46e08ca03694c898fb57f94a3959cfca9d772e06
+
+/* essentialandusefulparts */
+.heading {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding 10px;
+  background-color: white;
+}
+
+.column {
+  /* float: right; */
+  width: 45%;
+  padding: 25px 30px 25px 30px;
+}
+.columnimg {
+  /* float: left; */
+  width: 40%;
+  max-height: 500px;
+  /* border: 1px solid black; */
+  background-color: white;
+  z-index: 97;
+}
+.row{
+  width: 80%;
+  margin: 20px auto;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+  }
+}
