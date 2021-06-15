@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-indigo-900 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class>
-                    @auth
+
                     <!DOCTYPE html>
                     <html lang="en" dir="ltr">
                     <head>
@@ -246,14 +246,6 @@
                         <script src="{{ asset('general.js') }}"></script>
                     </body>
                     </html>
-
-
-
-                    @else
-                    You're a guest.
-                    <br>
-
-                    @endauth
                 </div>
             </div>
         </div>
