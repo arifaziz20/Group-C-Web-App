@@ -328,13 +328,13 @@
                             @auth
 
                             <a class="spre">
-                                <button type="submit">Save Preset</button>&nbsp&nbsp&nbsp<i class="fas fa-cloud-upload-alt"></i>
+                                <button type="submit">Save Preset&nbsp&nbsp&nbsp<i class="fas fa-cloud-upload-alt"></i></button>
                             </a>
 
                             @else
 
                             <a class="spre">
-                                <button id="btn-guest" type="button">Save Preset</button>&nbsp&nbsp&nbsp<i class="fas fa-cloud-upload-alt"></i>
+                                <button id="btn-guest" type="button">Save Preset&nbsp&nbsp&nbsp<i class="fas fa-cloud-upload-alt"></i></button>
                             </a>
 
                             @endauth
@@ -343,7 +343,7 @@
                             <form method="POST" action="pcbuilder/reset">
                                 @csrf
                                 <a class="rpre">
-                                    <button type="submit">Reset</button>&nbsp&nbsp&nbsp<i class="fas fa-sync"></i>
+                                    <button type="submit">Reset&nbsp&nbsp&nbsp<i class="fas fa-sync"></i></button>
                                 </a>
                             </form>
 
