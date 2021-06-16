@@ -19,7 +19,7 @@ class CreatePsusTable extends Migration
             $table->string('form_factor');
             $table->string('wattage');
             $table->string('efficiency_rating');
-            $table->integer('modular');
+            $table->string('modular');
             $table->float('price');
             $table->timestamps();
         });

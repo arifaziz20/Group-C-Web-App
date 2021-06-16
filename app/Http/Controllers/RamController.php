@@ -13,11 +13,6 @@ class RamController extends Controller
         return view ('admindashboard.ram.index', compact('rams'));
     }
 
-    public function show()
-    {
-        return view('pccomponents.ram');
-    }
-
     public function create()
     {
         return view('admindashboard.ram.create');

@@ -13,11 +13,6 @@ class MotherboardController extends Controller
         return view ('admindashboard.motherboard.index', compact('motherboards'));
     }
 
-    public function show()
-    {
-        return view('pccomponents.motherboard');
-    }
-
     public function create()
     {
         return view('admindashboard.motherboard.create');

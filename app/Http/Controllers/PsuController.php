@@ -13,11 +13,6 @@ class PsuController extends Controller
         return view ('admindashboard.psu.index', compact('psus'));
     }
 
-    public function show()
-    {
-        return view('pccomponents.psu');
-    }
-
     public function create()
     {
         return view('admindashboard.psu.create');

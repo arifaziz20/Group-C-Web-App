@@ -13,11 +13,6 @@ class GpuController extends Controller
         return view ('admindashboard.gpu.index', compact ('gpus'));
     }
 
-    public function show()
-    {
-        return view('pccomponents.gpu');
-    }
-
     public function create()
     {
         return view('admindashboard.gpu.create');

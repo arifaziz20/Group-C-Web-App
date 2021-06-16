@@ -10,6 +10,7 @@ use App\Http\Controllers\PresetsController;
 use App\Http\Controllers\PsuController;
 use App\Http\Controllers\RamController;
 use App\Http\Controllers\StorageController;
+use App\Http\Controllers\ComponentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +31,12 @@ Route::get('/components', [DashboardController::class, 'components'])->name('com
 //For Save preset from pc builder
 Route::get('/pcbuilder/save', [PresetsController::class, 'create']);
 //For Users, based on whirling dropdown css exercise
-Route::get('/components/cpus', [CpuController::class, 'show'])->name('listofCPU');
-Route::get('/components/gpus', [GpuController::class, 'show'])->name('listofGPU');
-Route::get('/components/motherboards', [MotherboardController::class, 'show'])->name('listofMotherboard');
-Route::get('/components/psus', [PsuController::class, 'show'])->name('listofPSU');
-Route::get('/components/rams', [RamController::class, 'show'])->name('listofRAM');
-Route::get('/components/storages', [StorageController::class, 'show'])->name('listofStorage');
+Route::get('/components/cpus', [ComponentController::class, 'cpu'])->name('listofCPU');
+Route::get('/components/gpus', [ComponentController::class, 'gpu'])->name('listofGPU');
+Route::get('/components/motherboards', [ComponentController::class, 'motherboard'])->name('listofMotherboard');
+Route::get('/components/psus', [ComponentController::class, 'psu'])->name('listofPSU');
+Route::get('/components/rams', [ComponentController::class, 'ram'])->name('listofRAM');
+Route::get('/components/storages', [ComponentController::class, 'storage'])->name('listofStorage');
 //For Admin Dashboard
 Route::resource('/User-record', UserController::class);
 Route::resource('/CPU-record', CpuController::class);

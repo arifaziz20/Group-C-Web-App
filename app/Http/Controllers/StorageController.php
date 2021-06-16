@@ -13,11 +13,6 @@ class StorageController extends Controller
         return view ('admindashboard.storage.index',compact('storages'));
     }
 
-    public function show()
-    {
-        return view('pccomponents.storage');
-    }
-
     public function create()
     {
         return view('admindashboard.storage.create');

@@ -13,11 +13,6 @@ class CpuController extends Controller
         return view ('admindashboard.cpu.index', compact ('cpus'));
     }
 
-    public function show()
-    {
-        return view('pccomponents.cpu');
-    }
-
     public function create()
     {
         return view('admindashboard.cpu.create');
