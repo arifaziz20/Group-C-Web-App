@@ -13,17 +13,11 @@
   border-radius: 10px;
 }
 
-.rpre
+.totalp
 {
   position: absolute;
-  right:240px;
-  top: 550px;
-  border: 2px solid white;
-  padding: 4px 12px 16px 12px;
-  color:indigo;
-  background-color:white;
-  height: 35px;
-  border-radius: 10px;
+  left:20px;
+  top: 500px;
 }
 
 #builder {
@@ -109,12 +103,13 @@
                         $querygpu = "SELECT p.gpu as gid,gpu.name as gname,gpu.price as gp FROM `pc_builders` as p inner join `gpus` as gpu on p.gpu = gpu.id";
                         $queryhdd = "SELECT p.storage as hid,hdd.name as hname,hdd.price as hp FROM `pc_builders` as p inner join `storages` as hdd on p.storage = hdd.id";
                         $querypsu = "SELECT p.psu as pid,psu.name as pname,psu.price as pp FROM `pc_builders` as p inner join `psus` as psu on p.psu = psu.id";
-
+                        $total = 0;
                         if ($result = $mysqli->query($querycpu)) {
                             while ($row = $result->fetch_assoc()) {
                                 $cpuid = $row["cid"];
                                 $cpuname = $row["cname"];
-                                $cpuprice= "RM".$row["cp"];
+                                $cpuprice= $row["cp"];
+                                $total+=$cpuprice;
 
                             }
                             $result->free();
@@ -123,7 +118,8 @@
                             while ($row = $result->fetch_assoc()) {
                                 $moboid = $row["mid"];
                                 $moboname = $row["mname"];
-                                $moboprice= "RM".$row["mp"];
+                                $moboprice= $row["mp"];
+                                $total+=$moboprice;
 
                             }
                             $result->free();
@@ -132,7 +128,8 @@
                             while ($row = $result->fetch_assoc()) {
                                 $ramid = $row["rid"];
                                 $ramname = $row["rname"];
-                                $ramprice= "RM".$row["rp"];
+                                $ramprice= $row["rp"];
+                                $total+=$ramprice;
 
                             }
                             $result->free();
@@ -141,7 +138,8 @@
                             while ($row = $result->fetch_assoc()) {
                                 $gpuid = $row["gid"];
                                 $gpuname = $row["gname"];
-                                $gpuprice= "RM".$row["gp"];
+                                $gpuprice= $row["gp"];
+                                $total+=$gpuprice;
                             }
                             $result->free();
                         }
@@ -149,7 +147,8 @@
                             while ($row = $result->fetch_assoc()) {
                                 $hddid = $row["hid"];
                                 $hddname = $row["hname"];
-                                $hddprice= "RM".$row["hp"];
+                                $hddprice= $row["hp"];
+                                $total+=$hddprice;
                             }
                             $result->free();
                         }
@@ -157,10 +156,12 @@
                             while ($row = $result->fetch_assoc()) {
                                 $psuid = $row["pid"];
                                 $psuname = $row["pname"];
-                                $psuprice= "RM".$row["pp"];
+                                $psuprice= $row["pp"];
+                                $total+=$psuprice;
                                 }
                                 $result->free();
                         }
+
                     ?>
 
                     <div class="textBox">
@@ -169,14 +170,14 @@
                         </p>
                         <center><hr width="80%" style="background-color:white;border: 1.5px solid white;"></center>
                             <form method="POST" action="pcbuilder/save">
-                            @csrf
+
                             <div id="builder">
                                 <div class="pick">
                                     <h4>CPU</h4>
                                     <hr>
                                     <?php
                                         if(isset ($cpuid) ){
-                                            echo $cpuname .'&nbsp&nbsp&nbsp'. $cpuprice;
+                                            echo $cpuname .'&nbsp&nbsp&nbspRM'.$cpuprice;
                                             echo '<input hidden name="cpu" value='.$cpuid.' placeholder='.$cpuname. '&nbsp&nbsp&nbsp' .$cpuprice.'>';
                                         } else
                                         echo '<button>
@@ -189,7 +190,7 @@
                                     <hr>
                                     <?php
                                         if( isset ($moboid) ){
-                                            echo $moboname .'&nbsp&nbsp&nbsp'. $moboprice;
+                                            echo $moboname .'&nbsp&nbsp&nbspRM'. $moboprice;
                                             echo '<input hidden name="motherboard" value='.$moboid.' placeholder='.$moboname. '&nbsp&nbsp&nbsp' .$moboprice.'>';
                                         } else
                                         echo '<button>
@@ -202,7 +203,7 @@
                                     <hr>
                                     <?php
                                         if( isset ($ramid) ){
-                                            echo $ramname .'&nbsp&nbsp&nbsp'. $ramprice;
+                                            echo $ramname .'&nbsp&nbsp&nbspRM'. $ramprice;
                                             echo '<input hidden name="ram" value='.$ramid.' placeholder='.$ramname. '&nbsp&nbsp&nbsp' .$ramprice.'>';
                                         } else
                                         echo '<button>
@@ -258,7 +259,7 @@
                                 <hr>
                                 <?php
                                     if( isset ($gpuid) ){
-                                        echo $gpuname.'&nbsp&nbsp&nbsp'. $gpuprice;
+                                        echo $gpuname.'&nbsp&nbsp&nbspRM'.$gpuprice;
                                         echo '<input hidden name="gpu" value='.$gpuid.' placeholder='.$gpuname. '&nbsp&nbsp&nbsp' .$gpuprice.'>';
                                     } else
                                     echo '<button>
@@ -271,7 +272,7 @@
                                 <hr>
                                 <?php
                                     if( isset ($hddid) ){
-                                        echo $hddname.'&nbsp&nbsp&nbsp'.$hddprice;
+                                        echo $hddname.'&nbsp&nbsp&nbspRM'.$hddprice;
                                         echo '<input hidden name="storage" value='.$hddid.'placeholder='.$hddname. '&nbsp&nbsp&nbsp'.$hddprice.'>';
                                     } else
                                     echo '<button>
@@ -284,7 +285,7 @@
                                 <hr>
                                 <?php
                                     if( isset ($psuid) ){
-                                        echo $psuname.'&nbsp&nbsp&nbsp'. $psuprice;
+                                        echo $psuname.'&nbsp&nbsp&nbspRM'. $psuprice;
                                         echo '<input hidden name="psu" value='.$psuid.'placeholder='.$psuname. '&nbsp&nbsp&nbsp'.$psuprice.'>';
                                     }
                                     else
@@ -295,6 +296,10 @@
                                     </button>';
                                 ?>
                             </div>
+
+
+                            <h3 class="totalp"> Total price is : RM <?php echo $total; ?></h3>
+
 
                             @auth
 
@@ -310,11 +315,7 @@
 
                             @endauth
                             </form>
-                            <form method="POST" action="pcbuilder/reset">
-                            <a class="rpre">
-                                <button type="submit">Reset Preset</button>
-                            </a>
-                            </form>
+
                         </div>
                     </div>
                 </div>

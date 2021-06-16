@@ -63,16 +63,6 @@ class BuilderController extends Controller
         return redirect('pcbuilder');
     }
 
-    public function reset(Request $request)
-    {
-        $currbuilder= pc_builder::find(1);
-        $currbuilder->delete();
-        $newbuilder = new pc_builder;
-        $newbuilder->id = 1;
-        $newbuilder->save();
-        return redirect('pcbuilder')->with('success', 'PC Builder have been reset!');
-    }
-
     public function save(Request $request)
     {
         $request->validate([

@@ -38,7 +38,6 @@ Route::get('/pcbuilder/addram/{id}', [BuilderController::class, 'addram']); //sa
 Route::get('/pcbuilder/addstorage/{id}', [BuilderController::class, 'addstorage']); //save GPU
 
 Route::post('/pcbuilder/save', [BuilderController::class, 'save']); // save preset
-Route::post('/pcbuilder/reset', [BuilderController::class, 'reset']); // reset preset
 
 //For Users, based on whirling dropdown css exercise
 Route::get('/components/cpus', [ComponentController::class, 'cpu'])->name('listofCPU');
