@@ -20,7 +20,6 @@
                     @endauth
                 </div>
 
-                <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -56,7 +55,6 @@
             .input {
                 text-align: center;padding: 15px 15px;
                 border: none;
-                color: white;
                 padding: 15px 15px;
                 text-align: center;
                 text-decoration: none;display:
@@ -87,12 +85,17 @@
     <body>
         <h1 class="pptitle">Popular Presets</h1><br><br>
         <p style="margin: auto;text-align:center;">Put your budget below to get a recommedation from us or view the popular presets</p><br><br>
-        <hr style="width:80%; height:0px; margin:0 auto;background-color:white;color:white;"><br>
-        <form action="post" method="get" style="text-align: center;">
-            <input type="text" id="budget" name="budget" class="input" placeholder="Put you budget here">
-            <input type="submit" class="button" value="Submit">
-        </form><br>
-        <div class=flextext><p>Presets                                        sort by:</p></div>
+        <hr style="width:80%; height:0px; margin:0 auto;background-color:white;color:whit;"><br>
+        {{-- <form action="post" method="get" style="text-align: center;"> --}}
+        <div style="text-align: center; width=250px;">
+            <input type="number" id="budget" name="budget" class="block my-0 mx-auto input" placeholder="Put you budget here">
+            <button class="ml-3 button block my-0 mx-auto nline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
+                Submit
+            </button>
+        </div>
+        {{-- </form> --}}
+        {{-- <br>
+        <div class=flextext><p>Presets                                        sort by:</p></div> --}}
         <br>
 <div>
         <center>
@@ -107,7 +110,7 @@
 
             <?php
                     $username = "root";
-                    $password = "";
+                    $password = "root";
                     $database = "cp_db";
                     $mysqli = new mysqli("localhost", $username, $password, $database);
                     $query = "SELECT * FROM `presets`";
@@ -135,7 +138,7 @@
 
                        <?php
                                $username = "root";
-                               $password = "";
+                               $password = "root";
                                $database = "cp_db";
                                $mysqli = new mysqli("localhost", $username, $password, $database);
                              //  $query = "SELECT * FROM `presets` pre join cpus c join gpus g join motherboards m join psus p join rams r join storages s where pre.cpu = c.id AND pre.gpu = g.id AND pre.psu = p.id AND pre.motherboard = m.id AND pre.ram = r.id AND pre.storage = s.id"
