@@ -210,31 +210,33 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
  <ol>
   <li><h3>Home Page<h3></li>
    <img>
-   <p> </p>
+   <p> 	Everybody will be redirected to the homepage when they first come to the website. Also, when user and admin login, they will be redirected to homepage first. Homepage show description about the Computer Parts for Beginners website.</p>
    <br>
   <li><h3>Login Page<h3></li>
    <img>
-   <p> </p>
+   <p>The login page basically is the template of the laravel breeze authentication but we made some changes to the colour. User need to fill in their email and password to login.
+ </p>
    <br>
   <li><h3>Register Page<h3></li>
    <img>
-   <p> </p>
+   <p> The register page is also based on the template of the laravel breeze authentication. We made some changes by replacing the logo with our own logo that show 'CP4B' which stand for Computer Parts For Beginners.</p>
    <br>
   <li><h3>PC Builder Page<h3></li>
    <img>
-   <p> </p>
+   <p>In this PC Builder page, user can estimate the cost of the PC parts that they want. They can add any pc part by clicking 'Choose CPU' for example . Then, it will redirect to Components>CPU page that show the list of CPU name and price that they can add to the PC Builder.  </p>
    <br>
   <li><h3>Popular Preset<h3></li>
    <img>
-   <p> </p>
+   <p>Popular Preset page will show the build that was created by the users. There is two tables, which is one to show the build id with the total price. The other table will show the preset details which consist of each component name and price for the specific preset.
+ </p>
    <br>
   <li><h3>PC Parts Info<h3></li>
    <img>
-   <p> </p>
+   <p> In PC Parts Info page, it basically display the information about the important PC parts. User can know more about the CPU, RAM, GPU, Storage and Motherboard by reading the details of each component.</p>
    <br>
   <li><h3>Components<h3></li>
    <img>
-   <p> </p>
+   <p>Admin can view the any records available in the database. For example, they can view users, GPU,CPU and other component record.  </p>
    <br>
   <li><h3>Admin View Records<h3></li>
    <img>
@@ -242,11 +244,11 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
    <br>
   <li><h3>Admin Edit Records<h3></li>
    <img>
-   <p> </p>
+   <p>Admin has privilege to edit the records of user and each PC part record. They can do so in when clicking the user record under admin dashboard. For user, admin change the roles either as admin or user. For component record, admin can edit each component attribute such as name and price.  </p>
    <br>
   <li><h3>Admin Create New Records<h3></li>
    <img>
-   <p> </p>
+   <p>At the bottom of the list of component record, admin can create new record by pressing "NEW CPU RECORD". They will be redicted to a page that they can fill in the details for the new record. </p>
    <br>
  </ol>
    
