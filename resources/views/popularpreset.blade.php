@@ -27,7 +27,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>popularpresets</title>
+        <?php
+        $GLOBALS['filteredquery'] = "SELECT * FROM `presets`";
 
+        ?>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -42,18 +45,6 @@
             }
 
         }
-            .button {
-                background-color: #902aaf;
-                border: none;
-                color: white;
-                padding: 15px 15px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 14px;
-                margin: 4px 2px;
-                cursor: pointer;
-            }
             .input {
                 text-align: center;padding: 15px 15px;
                 border: none;
@@ -81,14 +72,35 @@
             background: #fff;
             }
         </style>
+        <script type="text/JavaScript">
+            document.getElementById("submit").onclick = filterBudget();
+            function filterBudget(){
+                var budgets = document.getElementById("budget").value;
+               // alert(" your budget is "+ budgets) ;
+                if (budgets < 0) {
+                    alert("Please input a positive number.");
+                } else if (budgets >= 0 && budget < 2500) {
+                    alert("Sorry we don't have any suggestion for your budget range.");
+                } else if (budgets >= 2500 && budget < 5000) {
+                 $query = "SELECT * FROM `presets` WHERE total_price < 5000;";
+                } else if (budgets >= 5000 && budget < 10000) {
+                 $query = "SELECT * FROM `presets` WHERE total_price < 10000;";
+                } else {
+                 $query = "SELECT * FROM `presets`";
+                }
+                $GLOBALS['filteredquery'] = $query;
+            }
+
+        </script>
     </head>
     <body>
         <h1 class="pptitle">Popular Presets</h1><br><br>
         <p style="margin: auto;text-align:center;">Put your budget below to get a recommedation from us or view the popular presets</p><br><br>
         <hr style="width:80%; height:0px; margin:0 auto;background-color:white;color:white;"><br>
-        <form action="" method="POST" style="text-align: center;">
+        <form style="text-align: center;" method="post">
             <input type="text" id="budget" name="budget"  placeholder="Put you budget here">
-            <input type="button" class="button" name="submit" value="Submit" >
+            <input type="button" id="submit" name="submit" value="Submit" onclick="filterBudget()">
+
         </form><br>
         <p style="text-align: center;">Presets </p><br>
 
@@ -101,7 +113,7 @@
                         $password = "";
                         $database = "cp_db";
                         $mysqli = new mysqli("localhost", $username, $password, $database);
-                        $query = "SELECT * FROM `presets`";
+                        $query = $GLOBALS['filteredquery'];
 
                     ?>
                     <table border="0" cellspacing="2" cellpadding="2">
@@ -110,6 +122,26 @@
                             <td> <font face="Arial">Total Price</font> </td>
                         </tr>
                         <?php
+
+                    function filterBudget(){
+                 $budgets =  $_POST['budget'];
+
+                if ($budgets < 0) {
+                    echo "Please input a positive number.";
+                } else if ($budgets >= 0 && $budget < 2500) {
+                    echo "Sorry we don't have any suggestion for your budget range.";
+                } else if ($budgets >= 2500 && $budget < 5000) {
+                 $query = "SELECT * FROM `presets` WHERE total_price < 5000;";
+                } else if ($budgets >= 5000 && $budget < 10000) {
+                 $query = "SELECT * FROM `presets` WHERE total_price < 10000;";
+                } else {
+                 $query = "SELECT * FROM `presets`";
+                }
+
+            }
+
+
+
                         if ($result = $mysqli->query($query)) {
 
 
@@ -135,30 +167,13 @@
                         <br><br><p style="text-align: center;">Presets Details</p><br>
                         <table border="0" cellspacing="2" cellpadding="2" >
                             <tr>
-
                             <td> <font face="Arial">Product Name</font> </td>
-
                             <td> <font face="Arial">Total Price</font> </td>
-
                             <td> <font face="Arial">CPU</font> </td>
-
-
                             <td> <font face="Arial">GPU</font> </td>
-
-
-
                             <td> <font face="Arial">Motherboard</font> </td>
-
-
-
                             <td> <font face="Arial">PSU</font> </td>
-
-
-
                             <td> <font face="Arial">RAM</font> </td>
-
-
-
                             <td> <font face="Arial">Storage</font> </td>
 
 
