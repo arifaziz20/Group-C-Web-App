@@ -7,20 +7,22 @@
 
     <style>
         table, th, td {
-            border: 2px solid black;
+            margin: 2.5rem auto;
+            border: 2px solid white;
             text-align: center;
         }
         th, td {
-            padding: 6px;
+            padding: 10px;
         }
     </style>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    <a href="#">cpus</a> Heya! <br> <br>
-
+                <div class="p-6 bg-indigo-900 border-b border-gray-200 text-white text-center"">
+                    <h1 class="text-4xl text-white my-10">
+                        List of CPU
+                    </h1>
                     <?php
                     $username = "root";
                     $password = "root";
