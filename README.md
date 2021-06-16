@@ -188,20 +188,20 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
 
   
   <h3>ER Diagram<h3>
-<img src = "images/erd-revamped.png">
+<img src = "images/Diagram/latest_erdiagram.png">
 <br>
  
   
 
 <h2> Sequence Diagram.</h2>
 
-<img src = "images/Guest_sqdgram.jpg">
+<img src = "images/Diagram/Guest_sqdgram.jpg">
 <br>
 
-<img src = "images/User_sqdgram.jpg">
+<img src = "images/Diagram/User_sqdgram.jpg">
 <br>
 
-<img src = "images/Admin_sqdgram.jpg">
+<img src = "images//Diagram/Admin_sqdgram.jpg">
 <br>
 
 <h2> Project System Captured Screen</h2>
@@ -252,9 +252,9 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
    
 <h2>Challenges and Difficulties in Developing the Application</h2>
 <ol>
- <li> </li>
- <li> </li>
- <li> </li>
+ <li> Have to figure out how to have many roles in a website (configuring laratrust). </li>
+ <li> How to integrate blade, php and html component in php file.</li>
+ <li> Not enough time to give the finishing touch because too busy in making the website to be functional.</li>
 </ol>
    <br>
    
