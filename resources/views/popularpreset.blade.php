@@ -98,7 +98,7 @@
                 <center>
                      <?php
                         $username = "root";
-                        $password = "";
+                        $password = "root";
                         $database = "cp_db";
                         $mysqli = new mysqli("localhost", $username, $password, $database);
                         $query = "SELECT * FROM `presets`";
