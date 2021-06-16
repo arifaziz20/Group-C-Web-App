@@ -222,7 +222,7 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
    <p> The register page is also based on the template of the laravel breeze authentication. We made some changes by replacing the logo with our own logo that show 'CP4B' which stand for Computer Parts For Beginners.</p>
    <br>
   <li><h3>PC Builder Page<h3></li>
-   <img src = "snapshot/pc_builder.png">
+   <img src = "snapshot/edited_pcbuilder.png">
    <p>In this PC Builder page, user can estimate the cost of the PC parts that they want. They can add any pc part by clicking 'Choose CPU' for example . Then, it will redirect to Components>CPU page that show the list of CPU name and price that they can add to the PC Builder.  </p>
    <br>
   <li><h3>Popular Preset<h3></li>
