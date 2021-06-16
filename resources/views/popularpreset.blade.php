@@ -8,8 +8,19 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-indigo-900 overflow-hidden shadow-sm sm:rounded-lg">
-                <div>
+                <div class>
+                    @auth
+                    You're logged in as a user!
+                    <br>
 
+                    @else
+                    You're a guest.
+                    <br>
+
+                    @endauth
+                </div>
+
+                <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -29,6 +40,7 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
+
         }
             .button {
                 background-color: #902aaf;
@@ -45,6 +57,7 @@
             .input {
                 text-align: center;padding: 15px 15px;
                 border: none;
+                color: white;
                 padding: 15px 15px;
                 text-align: center;
                 text-decoration: none;display:
@@ -58,9 +71,6 @@
                 margin: 10px auto 10px;
                 text-align: center;
             }
-            .flextext{
-                flex:auto;
-            }
             table, td, th {
             border: 1px solid black;
             }
@@ -73,97 +83,267 @@
         </style>
     </head>
     <body>
-        <h1 class="pptitle text-white">Popular Presets</h1><br><br>
-        <p class="text-white" style="margin: auto;text-align:center;">Put your budget below to get a recommedation from us or view the popular presets</p><br><br>
-        <hr style="width:80%; height:0px; margin:0 auto;background-color:white;color:whit;"><br>
-        {{-- <form action="post" method="get" style="text-align: center;"> --}}
-        <div style="text-align: center; width=250px;">
-            <input type="number" id="budget" name="budget" class="block my-0 mx-auto input" placeholder="Put you budget here">
-            <button class="ml-3 button block my-0 mx-auto nline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">
-                Submit
-            </button>
-        </div>
-        {{-- </form> --}}
-        {{-- <br>
-        <div class=flextext><p>Presets                                        sort by:</p></div> --}}
-        <br>
-<div>
-        <center>
-         {{-- <table>
-            @foreach($presets as $data)
-            <tr>
-              <th>{{$data->id}}</th>
-              <th>{{$data->totalprice}}</th>
-            </tr>
-            @endforeach
-          </table></center><br> --}}
+        <h1 class="pptitle">Popular Presets</h1><br><br>
+        <p style="margin: auto;text-align:center;">Put your budget below to get a recommedation from us or view the popular presets</p><br><br>
+        <hr style="width:80%; height:0px; margin:0 auto;background-color:white;color:white;"><br>
+        <form action="" method="POST" style="text-align: center;">
+            <input type="text" id="budget" name="budget"  placeholder="Put you budget here">
+            <input type="button" class="button" name="submit" value="Submit" >
+        </form><br>
+        <p style="text-align: center;">Presets </p><br>
 
-            <?php
-                    $username = "root";
-                    $password = "root";
-                    $database = "cp_db";
-                    $mysqli = new mysqli("localhost", $username, $password, $database);
-                    $query = "SELECT * FROM `presets`";
-                    echo '<table border="0" cellspacing="2" cellpadding="2" >
+
+
+             <div>
+                <center>
+                     <?php
+                        $username = "root";
+                        $password = "";
+                        $database = "cp_db";
+                        $mysqli = new mysqli("localhost", $username, $password, $database);
+                        $query = "SELECT * FROM `presets`";
+
+                    ?>
+                    <table border="0" cellspacing="2" cellpadding="2">
                         <tr>
                             <td> <font face="Arial">Build ID</font> </td>
                             <td> <font face="Arial">Total Price</font> </td>
-                        </tr>';
-                    if ($result = $mysqli->query($query)) {
-                        while ($row = $result->fetch_assoc()) {
-                            $field1name = "Build".$row["id"];
-                            $field2name = "RM".$row["total_price"];
-                            echo '<tr>
-                                    <td>'.$field1name.'</td>
-                                    <td>'.$field2name.'</td>
-                                </tr>';
-                        }
-                        $result->free();
-                    }
-                    ?>
-                </center></div>
+                        </tr>
+                        <?php
+                        if ($result = $mysqli->query($query)) {
 
-                <br><br><div><h3 class="text-white">Preset details</h3></div><br>
+
+                            while ($row = $result->fetch_assoc()) {
+                                $field1name = "Build".$row["id"];
+                                $field2name = "RM".$row["total_price"];
+
+                                echo '<tr>
+                                            <td >'.$field1name.'</td>
+                                            <td>'.$field2name.'</td>
+                                        </tr>';
+
+                            }
+                            $result->free();
+                            }
+
+
+                        ?>
+
+
+
+                        </table>
+                        <br><br><p style="text-align: center;">Presets Details</p><br>
+                        <table border="0" cellspacing="2" cellpadding="2" >
+                            <tr>
+
+                            <td> <font face="Arial">Product Name</font> </td>
+
+                            <td> <font face="Arial">Total Price</font> </td>
+
+                            <td> <font face="Arial">CPU</font> </td>
+
+
+                            <td> <font face="Arial">GPU</font> </td>
+
+
+
+                            <td> <font face="Arial">Motherboard</font> </td>
+
+
+
+                            <td> <font face="Arial">PSU</font> </td>
+
+
+
+                            <td> <font face="Arial">RAM</font> </td>
+
+
+
+                            <td> <font face="Arial">Storage</font> </td>
+
+
+
+
+
+                            </tr>
+                            <?php
+                            $query = "SELECT pre.id as buildid, pre.total_price as totalprice, c.model_name as cname, g.name as gname, m.name as mname, p.name as pname, r.name as rname, s.name as sname
+                            FROM `presets` pre join cpus c join gpus g join motherboards m join psus p join rams r join storages s WHERE pre.cpu = c.id AND pre.gpu = g.id AND pre.psu = p.id AND pre.motherboard = m.id AND pre.ram = r.id AND pre.storage = s.id";
+                            if ($result = $mysqli->query($query)) {
+                                   while ($row = $result->fetch_assoc()) {
+                                       $field1name = "Build".$row["buildid"];
+                                       $field2name = "RM".$row["totalprice"];
+                                       $field3name = $row["cname"];
+                                       $field4name = $row["gname"];
+                                       $field5name = $row["mname"];
+                                       $field6name = $row["pname"];
+                                       $field7name = $row["rname"];
+                                       $field8name = $row["sname"];
+
+
+
+                                       echo '<tr>
+                                            <td>'.$field1name.'</td>
+                                            <td>'.$field2name.'</td>
+                                            <td>'.$field3name.'</td>
+                                            <td>'.$field4name.'</td>
+                                            <td>'.$field5name.'</td>
+                                            <td>'.$field6name.'</td>
+                                            <td>'.$field7name.'</td>
+                                            <td>'.$field8name.'</td>
+                                            </tr>' ;
+
+                                    }
+                                   $result->free();
+                                  }
+
+                            ?>
+                            </table>
+                             {{-- <?php
+                           echo'<table border="0" cellspacing="2" cellpadding="2">
+                                <tr>
+                                    <td> <font face="Arial">Build ID</font> </td>
+                                    <td> <font face="Arial">Total Price</font> </td>
+                                </tr>';
+
+                            if ($result = $mysqli->query($query)) {
+                                while ($row = $result->fetch_assoc()) {
+                                    $field1name = "Build".$row["id"];
+                                    $field2name = "RM".$row["total_price"];
+
+
+                                    echo '<tr>
+                                            <td >'.$field1name.'</td>
+                                            <td>'.$field2name.'</td>
+                                        </tr>';
+                                }
+                                $result->free();
+                            }
+
+                            ?>
+                     <script>
+                        document.getElementById("populartable").style.display = "block";
+                        const btn = document.getElementById("submit");
+                        btn.onclick = function() {
+                         //
+
+
+
+                        //     $username = "root";
+                        //     $password = "";
+                        //     $database = "cp_db";
+                        //     $mysqli = new mysqli("localhost", $username, $password, $database);
+                        // //  $budget = $_POST['budget'];
+                        //     $query = "SELECT * FROM `presets`";
+                        //      if(isset($_POST['submit'])){
+                        //         if ($_POST['budget'] < 0) {
+                        //                 alert("Please input a positive number.");
+                        //             } else if ($_POST['budget'] >= 0 && $_POST['budget'] < 2500) {
+                        //                 alert("Sorry we don't have any suggestion for your budget range.");
+                        //             } else if ($_POST['budget'] >= 2500 && $_POST['budget'] < 5000) {
+                        //                 $query = "SELECT * FROM `presets` WHERE total_price < 5000;";
+                        //             } else if ($_POST['budget'] >= 5000 && $_POST['budget'] < 10000) {
+                        //                 $query = "SELECT * FROM `presets`WHERE total_price < 10000;";
+                        //             }else{
+                        //                 $query = "SELECT * FROM `presets`";
+                        //             }
+                        //      }
+
+
+                    var e = document.getElementById("budget");
+                        var popular = document.getElementById("populartable");
+                        var detail = document.getElementById("detail");
+                        var budgetValue = e.value;
+                          if (budgetValue < 0) {
+                            alert("Please input a positive number.");
+                        } else if (budgetValue >= 0 && budgetValue < 2500) {
+                            alert("Sorry we don't have any suggestion for your budget range.");
+                        } else if (budgetValue >= 2500 && budgetValue < 5000) {
+                            a
+                        } else if (budgetValue >= 5000 && budgetValue < 10000) {
+                            b
+                        } else {
+                            c
+                        }}
+                    </script>
+                </center>
+            </div>
+
+                <br><br><h3>Preset details</h3><br>
+                <div name="detail" id="detail">
                 <center>
 
                        <?php
-                               $username = "root";
-                               $password = "root";
-                               $database = "cp_db";
-                               $mysqli = new mysqli("localhost", $username, $password, $database);
-                             //  $query = "SELECT * FROM `presets` pre join cpus c join gpus g join motherboards m join psus p join rams r join storages s where pre.cpu = c.id AND pre.gpu = g.id AND pre.psu = p.id AND pre.motherboard = m.id AND pre.ram = r.id AND pre.storage = s.id"
-                               $query = "SELECT * FROM `presets` pre join cpus c join gpus g join motherboards m where pre.cpu = c.id AND pre.gpu = g.id AND pre.motherboard = m.id";
-                               echo '<table border="0" cellspacing="2" cellpadding="2" >
+                           $query = "SELECT pre.id as buildid, pre.total_price as totalprice, c.model_name as cname, g.name as gname, m.name as mname, p.name as pname, r.name as rname, s.name as sname
+                               FROM `presets` pre join cpus c join gpus g join motherboards m join psus p join rams r join storages s WHERE pre.cpu = c.id AND pre.gpu = g.id AND pre.psu = p.id AND pre.motherboard = m.id AND pre.ram = r.id AND pre.storage = s.id";
+
+                            // if(isset($_POST['submit'])){
+                            // if ($budget < 0) {
+                            //     alert("Please input a positive number.");
+                            // } else if ($budget >= 0 && $budget < 2500) {
+                            //     alert("Sorry we don't have any suggestion for your budget range.");
+                            // } else if ($budget >= 2500 && $budget < 5000) {
+                            //     $query = "SELECT pre.id as buildid, pre.total_price as totalprice, c.model_name as cname, g.name as gname, m.name as mname, p.name as pname, r.name as rname, s.name as sname
+                            //    FROM `presets` pre join cpus c join gpus g join motherboards m join psus p join rams r join storages s WHERE pre.cpu = c.id AND pre.gpu = g.id AND pre.psu = p.id AND pre.motherboard = m.id AND pre.ram = r.id AND pre.storage = s.id
+                            //     AND totalprice <5000";
+                            // } else if ($budget >= 5000 && $budget < 10000) {
+                            //     $query = "SELECT pre.id as buildid, pre.total_price as totalprice, c.model_name as cname, g.name as gname, m.name as mname, p.name as pname, r.name as rname, s.name as sname
+                            //    FROM `presets` pre join cpus c join gpus g join motherboards m join psus p join rams r join storages s WHERE pre.cpu = c.id AND pre.gpu = g.id AND pre.psu = p.id AND pre.motherboard = m.id AND pre.ram = r.id AND pre.storage = s.id
+                            //     AND totalprice <10000";
+                            // }else{
+                            //    $query = "SELECT pre.id as buildid, pre.total_price as totalprice, c.model_name as cname, g.name as gname, m.name as mname, p.name as pname, r.name as rname, s.name as sname
+                            //    FROM `presets` pre join cpus c join gpus g join motherboards m join psus p join rams r join storages s WHERE pre.cpu = c.id AND pre.gpu = g.id AND pre.psu = p.id AND pre.motherboard = m.id AND pre.ram = r.id AND pre.storage = s.id";
+                            // }}
+
+                                echo'<table border="0" cellspacing="2" cellpadding="2" >
                                    <tr>
                                        <td> <font face="Arial">Build ID</font> </td>
                                        <td> <font face="Arial">Total Price</font> </td>
-                                       <td> <font face="Arial">cpu</font> </td>
-                                       <td> <font face="Arial">gpu</font> </td>
-                                       <td> <font face="Arial">motherboard</font> </td>
+                                       <td> <font face="Arial">CPU</font> </td>
+                                       <td> <font face="Arial">GPU</font> </td>
+                                       <td> <font face="Arial">Motherboard</font> </td>
+                                       <td> <font face="Arial">PSU</font> </td>
+                                       <td> <font face="Arial">RAM</font> </td>
+                                       <td> <font face="Arial">Storage</font> </td>
+
                                    </tr>';
+
                                if ($result = $mysqli->query($query)) {
                                    while ($row = $result->fetch_assoc()) {
-                                       $field1name = "Build".$row["id"];
-                                       $field2name = "RM".$row["total_price"];
-                                       $field3name = $row["model_name"];
-                                       $field4name = $row["name"];
-                                       $field5name = $row["name"];
-                                       echo '<tr>
-                                               <td>'.$field1name.'</td>
-                                               <td>'.$field2name.'</td>
-                                               <td>'.$field3name.'</td>
-                                               <td>'.$field4name.'</td>
-                                               <td>'.$field5name.'</td>
-                                           </tr>';
-                                   }
+                                       $field1name = "Build".$row["buildid"];
+                                       $field2name = "RM".$row["totalprice"];
+                                       $field3name = $row["cname"];
+                                       $field4name = $row["gname"];
+                                       $field5name = $row["mname"];
+                                       $field6name = $row["pname"];
+                                       $field7name = $row["rname"];
+                                       $field8name = $row["sname"];
+
+
+
+                                       echo '<tr><td>'.$field1name.'</td></tr>
+
+                                            <tr>  <td>'.$field2name.'</td></tr>
+                                            <tr>  <td>'.$field3name.'</td></tr>
+                                            <tr>  <td>'.$field4name.'</td></tr>
+                                            <tr>  <td>'.$field5name.'</td></tr>
+                                            <tr>  <td>'.$field6name.'</td></tr>
+                                            <tr> <td>'.$field7name.'</td></tr>
+                                            <tr>  <td>'.$field8name.'</td></tr>'
+                                           ;
+                                    }
                                    $result->free();
-                               }
-                               ?>
+                                  }
+
+
+                               ?> --}}
                     </center>
+                </div>
+
 
 
         </body>
-                </div>
+
             </div>
         </div>
     </div>
