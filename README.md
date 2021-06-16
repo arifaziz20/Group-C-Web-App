@@ -232,7 +232,7 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
    <p>In this PC Builder page, user can estimate the cost of the PC parts that they want. They can add any pc part by clicking 'Choose CPU' for example . Then, it will redirect to Components>CPU page that show the list of CPU name and price that they can add to the PC Builder.  </p>
    <br>
   <li><h3>Popular Preset<h3></li>
-   <img src = "snapshot/Popular preset.png">
+   <img src = "snapshot/edited_popular_preset.png">
    <p>Popular Preset page will show the build that was created by the users. There is two tables, which is one to show the build id with the total price. The other table will show the preset details which consist of each component name and price for the specific preset.
  </p>
    <br>
