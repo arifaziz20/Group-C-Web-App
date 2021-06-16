@@ -95,7 +95,7 @@
                     <?php
                         $username = "root";
                         $password = "root";
-                        $database = "cp4beginners";
+                        $database = "cp_db";
                         $mysqli = new mysqli("localhost", $username, $password, $database);
                         $querycpu = "SELECT p.cpu as cid,cpu.model_name as cname,cpu.price as cp FROM `pc_builders` as p inner join `cpus` as cpu on p.cpu = cpu.id";
                         $querymobo = "SELECT p.motherboard as mid,mobo.name as mname,mobo.price as mp FROM `pc_builders` as p inner join `motherboards` as mobo on p.motherboard = mobo.id";
