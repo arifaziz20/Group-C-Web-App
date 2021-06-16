@@ -155,18 +155,25 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
   - "/" redirect to "/home" return view home
   - "/login" return view login 
   - "/register" return view register
-  - "/pc-builder" return view PC Builder
-  - "/popular-presets" return view Popular
-  - "/component" return view Components
-  - "/component/cpu" return view component cpu
-  - "/component/ram" return view component ram
-  - "/component/gpu" return view component gpu
-  - "/component/motherboard" return view component motherboard
-  - "/component/storage" return view component storage
-  - "/component/psu" return view component psu
+  - "/pcbuilder" return view PC Builder
+  - "/pcbuilder/addcpu/{id}" redirect to PC Builder with adding CPU with following id
+  - "/pcbuilder/addgpu/{id}" redirect to PC Builder with adding GPU with following id
+  - "/pcbuilder/addmotherboard/{id}" redirect to PC Builder with adding Motherboard with following id
+  - "/pcbuilder/addpsu/{id}" redirect to PC Builder with adding PSU with following id
+  - "/pcbuilder/addram/{id}" redirect to PC Builder with adding RAM with following id
+  - "/pcbuilder/addstorage/{id}" redirect to PC Builder with adding Storage with following id
+  - "/pcbuilder/save" redirect to PC Builder with saving preset to Preset table in database
+  - "/popularpreset" return view Popular
+  - "/components" return view Components
+  - "/components/cpus" return view component cpu
+  - "/components/rams" return view component ram
+  - "/components/gpus" return view component gpu
+  - "/components/motherboards" return view component motherboard
+  - "/components/storages" return view component storage
+  - "/components/psus" return view component psu
   - "/pc-parts-info" return view pc parts info
   - "/Userrecord" return view user records list
-  - "/Userrecord/editrole" return view edit role for a user
+  - "/Userrecord/edit" return view edit role for a user
   - "/CPUrecord" return view cpu records list
   - "/CPUrecord/edit" return view edit a cpu record
   - "/CPUrecord/create" return view create a new cpu record
@@ -185,7 +192,6 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
   - "/Storagerecord" return view storage records list
   - "/Storagerecord/edit" return view edit a storage record
   - "/Storagerecord/create" return view create a new storage record
-
   
   <h3>ER Diagram<h3>
 <img src = "images/Diagram/latest_erdiagram.png">
