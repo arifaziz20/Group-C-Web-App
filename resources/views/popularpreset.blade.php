@@ -6,6 +6,7 @@
 
         <title>popularpresets</title>
         <?php
+
         $GLOBALS['filteredquery'] = "SELECT * FROM `presets`";
 
         ?>
@@ -25,23 +26,8 @@
                 color:white;
 
             }
-<<<<<<< HEAD
 
         }
-=======
-            .button {
-                background-color: #902aaf;
-                border: none;
-                color: white;
-                padding: 15px 15px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 14px;
-                margin: 4px 2px;
-                cursor: pointer;
-            }
->>>>>>> cb5cabf0324da650218830df4d5a4ee55270fcb0
             .input {
                 text-align: center;padding: 15px 15px;
                 border: none;
@@ -99,7 +85,6 @@
         <h1 class="pptitle">Popular Presets</h1><br><br>
         <p style="margin: auto;text-align:center;">Put your budget below to get a recommedation from us or view the popular presets</p><br><br>
         <hr style="width:80%; height:0px; margin:0 auto;background-color:white;color:white;"><br>
-<<<<<<< HEAD
         <form style="text-align: center;" method="post">
             <input type="text" id="budget" name="budget"  placeholder="Put you budget here">
             <input type="button" id="submit" name="submit" value="Submit" onclick="filterBudget()">
@@ -325,24 +310,6 @@
                                        <td> <font face="Arial">Storage</font> </td>
 
                                    </tr>';
-=======
-        <form action="post" method="get" style="text-align: center;">
-            <input type="text" id="budget" name="budget" class="input" placeholder="Put you budget here">
-            <input type="submit" class="button" value="Submit">
-        </form><br>
-        <div class=flextext><p>Presets    sort by:</p></div>
-        <br>
-
-         <center>
-          <table>
-            @foreach($presets as $data)
-            <tr>
-              <th>{{$data->id}}</th>
-              <th>{{$data->totalprice}}</th>
-            </tr>
-            @endforeach
-          </table></center><br>
->>>>>>> cb5cabf0324da650218830df4d5a4ee55270fcb0
 
 
 
