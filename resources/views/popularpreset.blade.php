@@ -8,17 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-indigo-900 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    @auth
-                    You're logged in as a user!
-                    <br>
-
-                    @else
-                    You're a guest.
-                    <br>
-
-                    @endauth
-                </div>
+                <div>
 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -83,8 +73,8 @@
         </style>
     </head>
     <body>
-        <h1 class="pptitle">Popular Presets</h1><br><br>
-        <p style="margin: auto;text-align:center;">Put your budget below to get a recommedation from us or view the popular presets</p><br><br>
+        <h1 class="pptitle text-white">Popular Presets</h1><br><br>
+        <p class="text-white" style="margin: auto;text-align:center;">Put your budget below to get a recommedation from us or view the popular presets</p><br><br>
         <hr style="width:80%; height:0px; margin:0 auto;background-color:white;color:whit;"><br>
         {{-- <form action="post" method="get" style="text-align: center;"> --}}
         <div style="text-align: center; width=250px;">
@@ -133,7 +123,7 @@
                     ?>
                 </center></div>
 
-                <br><br><div><h3>Preset details</h3></div><br>
+                <br><br><div><h3 class="text-white">Preset details</h3></div><br>
                 <center>
 
                        <?php
@@ -173,7 +163,7 @@
 
 
         </body>
-
+                </div>
             </div>
         </div>
     </div>
