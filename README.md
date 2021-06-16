@@ -236,11 +236,11 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
    <br>
   <li><h3>Components<h3></li>
    <img>
-   <p>Admin can view the any records available in the database. For example, they can view users, GPU,CPU and other component record.  </p>
+   <p>In Components, the page listed links to each components part lists page.  </p>
    <br>
   <li><h3>Admin View Records<h3></li>
    <img>
-   <p> </p>
+   <p>Admin can view the any records available in the database. For example, they can view users, GPU,CPU and other component record.  </p>
    <br>
   <li><h3>Admin Edit Records<h3></li>
    <img>
