@@ -8,46 +8,39 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    @auth
-                    You're logged in as a user!
-                    <br>
-
-                    @else
-                    You're a guest.
-                    <br>
-
-                    @endauth
-
-                    <ul>
+                <div class="p-6 bg-indigo-900 border-b border-gray-200 text-center">
+                    <h1 class="text-5xl text-white my-10">
+                        List of Compononet Parts
+                    </h1>
+                    <ul class="my-10">
                         <li>
                             <x-nav-link :href="route('listofCPU')">
-                                {{ __('CPU') }}
+                                <p class="text-white text-2xl">CPU</p>
                             </x-nav-link>
                         </li>
                         <li>
                             <x-nav-link :href="route('listofGPU')">
-                                {{ __('GPU') }}
+                                <p class="text-white text-2xl">GPU</p>
                             </x-nav-link>
                         </li>
                         <li>
                             <x-nav-link :href="route('listofMotherboard')">
-                                {{ __('Motherboard') }}
+                                <p class="text-white text-2xl">Motherboard</p>
                             </x-nav-link>
                         </li>
                         <li>
                             <x-nav-link :href="route('listofPSU')">
-                                {{ __('PSU') }}
+                                <p class="text-white text-2xl">PSU</p>
                             </x-nav-link>
                         </li>
                         <li>
                             <x-nav-link :href="route('listofRAM')">
-                                {{ __('RAM') }}
+                                <p class="text-white text-2xl">RAM</p>
                             </x-nav-link>
                         </li>
                         <li>
                             <x-nav-link :href="route('listofStorage')">
-                                {{ __('Storage') }}
+                                <p class="text-white text-2xl">Storage</p>
                             </x-nav-link>
                         </li>
                     </ul>

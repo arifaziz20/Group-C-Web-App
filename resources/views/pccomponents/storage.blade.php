@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Components') }}
+            {{ __('Components > Storage') }}
         </h2>
     </x-slot>
 
@@ -18,7 +18,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+                <div class="p-6 bg-indigo-900 border-b border-gray-200">
                     <a href="#">storages</a> Heya! <br> <br>
                     <?php
                     $username = "root";
@@ -45,6 +45,7 @@
                             $field4name = $row["form_factor"];
                             $field5name = "RM".$row["price"];
                             $field6name = "Add";
+                            $id = $row["id"];
 
                             echo '<tr>
                                     <td>'.$field1name.'</td>
@@ -52,7 +53,7 @@
                                     <td>'.$field3name.'</td>
                                     <td>'.$field4name.'</td>
                                     <td>'.$field5name.'</td>
-                                    <td>'.$field6name.'</td>
+                                    <td><a href="../pcbuilder/addstorage/'.$id.'">'.$field6name.'</a></td>
                                 </tr>';
                         }
                         $result->free();

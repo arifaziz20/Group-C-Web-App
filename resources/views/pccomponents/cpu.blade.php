@@ -18,7 +18,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+                <div class="p-6 bg-indigo-900 border-b border-gray-200">
                     <a href="#">cpus</a> Heya! <br> <br>
 
                     <?php
@@ -42,12 +42,13 @@
                             $field2name = $row["manufacturer"];
                             $field3name = "RM".$row["price"];
                             $field4name = "Add";
+                            $id = $row["id"];
 
                             echo '<tr>
                                     <td>'.$field1name.'</td>
                                     <td>'.$field2name.'</td>
                                     <td>'.$field3name.'</td>
-                                    <td>'.$field4name.'</td>
+                                    <td><a href="../pcbuilder/addcpu/'.$id.'">'.$field4name.'</a></td>
                                 </tr>';
                         }
                         $result->free();

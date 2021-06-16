@@ -23,7 +23,7 @@ class ComponentController extends Controller
 
     public function psu()
     {
-        return view('pccomponents.');
+        return view('pccomponents.psu');
     }
 
     public function ram()

@@ -11,6 +11,7 @@ use App\Http\Controllers\PsuController;
 use App\Http\Controllers\RamController;
 use App\Http\Controllers\StorageController;
 use App\Http\Controllers\ComponentController;
+use App\Http\Controllers\BuilderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +29,16 @@ Route::get('/pcbuilder', [DashboardController::class, 'pcbuilder'])->name('pcbui
 Route::get('/popularpreset', [DashboardController::class, 'popularpreset'])->name('popularpreset');
 Route::get('/pcpartsinfo', [DashboardController::class, 'pcpartsinfo'])->name('pcpartsinfo');
 Route::get('/components', [DashboardController::class, 'components'])->name('components');
-//For Save preset from pc builder
-Route::get('/pcbuilder/save', [PresetsController::class, 'create']);
+//For PC Builder
+Route::get('/pcbuilder/addcpu/{id}', [BuilderController::class, 'addcpu']); //save GPU
+Route::get('/pcbuilder/addgpu/{id}', [BuilderController::class, 'addgpu']); //save GPU
+Route::get('/pcbuilder/addmotherboard/{id}', [BuilderController::class, 'addmotherboard']); //save GPU
+Route::get('/pcbuilder/addpsu/{id}', [BuilderController::class, 'addpsu']); //save GPU
+Route::get('/pcbuilder/addram/{id}', [BuilderController::class, 'addram']); //save GPU
+Route::get('/pcbuilder/addstorage/{id}', [BuilderController::class, 'addstorage']); //save GPU
+Route::post('/pcbuilder/save', [BuilderController::class, 'save']); // save preset
+Route::post('/pcbuilder/reset', [BuilderController::class, 'reset']); // reset preset
+
 //For Users, based on whirling dropdown css exercise
 Route::get('/components/cpus', [ComponentController::class, 'cpu'])->name('listofCPU');
 Route::get('/components/gpus', [ComponentController::class, 'gpu'])->name('listofGPU');
