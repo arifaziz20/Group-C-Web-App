@@ -170,7 +170,7 @@
                         </p>
                         <center><hr width="80%" style="background-color:white;border: 1.5px solid white;"></center>
                             <form method="POST" action="pcbuilder/save">
-
+                               @csrf
                             <div id="builder">
                                 <div class="pick">
                                     <h4>CPU</h4>
