@@ -63,6 +63,16 @@ class BuilderController extends Controller
         return redirect('pcbuilder');
     }
 
+    public function reset(Request $request)
+    {
+        $currbuilder= pc_builder::find(1);
+        $currbuilder->delete();
+        $newbuilder = new pc_builder;
+        $newbuilder->id = 1;
+        $newbuilder->save();
+        return redirect('pcbuilder')->with('success', 'Successfully Reset!');
+    }
+
     public function save(Request $request)
     {
         $request->validate([
@@ -71,8 +81,15 @@ class BuilderController extends Controller
             'motherboard'=>'required',
             'psu'=>'required',
             'ram'=>'required',
-            'storage'=>'required'
+            'storage'=>'required',
+            'cpu.required' => redirect('pcbuilder')->with('success', 'Please complete all PC parts'),
+            'gpu.required' => redirect('pcbuilder')->with('success', 'Please complete all PC parts'),
+            'motherboard.required' => redirect('pcbuilder')->with('success', 'Please complete all PC parts'),
+            'psu.required' => redirect('pcbuilder')->with('success', 'Please complete all PC parts'),
+            'ram.required' => redirect('pcbuilder')->with('success', 'Please complete all PC parts'),
+            'storage.required' => redirect('pcbuilder')->with('success', 'Please complete all PC parts')
         ]);
+
         $currbuilder= pc_builder::find(1);
 
         $cpuid = $currbuilder->cpu;

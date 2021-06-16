@@ -1,9 +1,23 @@
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 <style>
 .spre
 {
   position: absolute;
   right:100px;
+  top: 550px;
+  border: 2px solid white;
+  padding: 4px 12px 16px 12px;
+  color:indigo;
+  background-color:white;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.rpre
+{
+  position: absolute;
+  right:270px;
   top: 550px;
   border: 2px solid white;
   padding: 4px 12px 16px 12px;
@@ -71,6 +85,16 @@
 {
   height: 110px;
 }
+
+.alert
+{
+    border: 0;
+    border-radius: 0;
+    color:black;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: paleturquoise;
+}
 </style>
 <x-app-layout>
     <x-slot name="header">
@@ -81,7 +105,7 @@
 
     <div class="col-sm-12">
         @if(session()->get('success'))
-          <div class="alert alert-success text-center">
+          <div class="alert text-center">
                 {{ session()->get('success') }}
           </div>
         @endif
@@ -91,7 +115,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-indigo-900 h-full overflow-hidden shadow-sm sm:rounded-lg">
                 <div style="color:white;">
-
+                    @csrf
                     <?php
                         $username = "root";
                         $password = "root";
@@ -170,7 +194,7 @@
                         </p>
                         <center><hr width="80%" style="background-color:white;border: 1.5px solid white;"></center>
                             <form method="POST" action="pcbuilder/save">
-
+                                @csrf
                             <div id="builder">
                                 <div class="pick">
                                     <h4>CPU</h4>
@@ -304,16 +328,23 @@
                             @auth
 
                             <a class="spre">
-                                <button type="submit">Save Preset</button>
+                                <button type="submit">Save Preset</button>&nbsp&nbsp&nbsp<i class="fas fa-cloud-upload-alt"></i>
                             </a>
 
                             @else
 
                             <a class="spre">
-                                <button id="btn-guest" type="button">Save Preset</button>
+                                <button id="btn-guest" type="button">Save Preset</button>&nbsp&nbsp&nbsp<i class="fas fa-cloud-upload-alt"></i>
                             </a>
 
                             @endauth
+                            </form>
+
+                            <form method="POST" action="pcbuilder/reset">
+                                @csrf
+                                <a class="rpre">
+                                    <button type="submit">Reset</button>&nbsp&nbsp&nbsp<i class="fas fa-sync"></i>
+                                </a>
                             </form>
 
                         </div>
