@@ -49,6 +49,7 @@
                             $field6name = $row["memory_slot"];
                             $field7name = "RM".$row["price"];
                             $field8name = "Add";
+                            $id = $row["id"];
 
                             echo '<tr>
                                     <td>'.$field1name.'</td>
@@ -58,7 +59,7 @@
                                     <td>'.$field5name.'</td>
                                     <td>'.$field6name.'</td>
                                     <td>'.$field7name.'</td>
-                                    <td>'.$field8name.'</td>
+                                    <td><a href="../pcbuilder/addmotherboard/'.$id.'">'.$field8name.'</a></td>
                                 </tr>';
                         }
                         $result->free();

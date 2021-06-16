@@ -47,6 +47,7 @@
                             $field5name = $row["modular"];
                             $field6name = "RM".$row["price"];
                             $field7name = "Add";
+                            $id = $row["id"];
 
                             echo '<tr>
                                     <td>'.$field1name.'</td>
@@ -55,7 +56,7 @@
                                     <td>'.$field4name.'</td>
                                     <td>'.$field5name.'</td>
                                     <td>'.$field6name.'</td>
-                                    <td>'.$field7name.'</td>
+                                    <td><a href="../pcbuilder/addpsu/'.$id.'">'.$field7name.'</a></td>
                                 </tr>';
                         }
                         $result->free();

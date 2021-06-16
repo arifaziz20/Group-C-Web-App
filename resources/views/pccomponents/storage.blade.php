@@ -45,6 +45,7 @@
                             $field4name = $row["form_factor"];
                             $field5name = "RM".$row["price"];
                             $field6name = "Add";
+                            $id = $row["id"];
 
                             echo '<tr>
                                     <td>'.$field1name.'</td>
@@ -52,7 +53,7 @@
                                     <td>'.$field3name.'</td>
                                     <td>'.$field4name.'</td>
                                     <td>'.$field5name.'</td>
-                                    <td>'.$field6name.'</td>
+                                    <td><a href="../pcbuilder/addstorage/'.$id.'">'.$field6name.'</a></td>
                                 </tr>';
                         }
                         $result->free();

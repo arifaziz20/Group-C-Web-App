@@ -25,14 +25,14 @@ class DashboardController extends Controller
         //     :   View::make('homepage');
     }
 
-    public function pcbuilder()
-    {
-        return view('pcbuilder');
-    }
-
     public function popularpreset()
     {
         return view('popularpreset');
+    }
+
+    public function pcbuilder()
+    {
+        return view('pcbuilder');
     }
 
     public function pcpartsinfo()

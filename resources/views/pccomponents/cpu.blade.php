@@ -42,12 +42,13 @@
                             $field2name = $row["manufacturer"];
                             $field3name = "RM".$row["price"];
                             $field4name = "Add";
+                            $id = $row["id"];
 
                             echo '<tr>
                                     <td>'.$field1name.'</td>
                                     <td>'.$field2name.'</td>
                                     <td>'.$field3name.'</td>
-                                    <td>'.$field4name.'</td>
+                                    <td><a href="../pcbuilder/addcpu/'.$id.'">'.$field4name.'</a></td>
                                 </tr>';
                         }
                         $result->free();

@@ -43,13 +43,14 @@
                             $field3name = $row["module"];
                             $field4name = "RM".$row["price"];
                             $field5name = "Add";
+                            $id = $row["id"];
 
                             echo '<tr>
                                     <td>'.$field1name.'</td>
                                     <td>'.$field2name.'</td>
                                     <td>'.$field3name.'</td>
                                     <td>'.$field4name.'</td>
-                                    <td>'.$field5name.'</td>
+                                    <td><a href="../pcbuilder/addram/'.$id.'">'.$field5name.'</a></td>
                                 </tr>';
                         }
                         $result->free();

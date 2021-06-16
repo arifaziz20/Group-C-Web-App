@@ -13,7 +13,7 @@ class pc_builder extends Model
     {
         return $this->belongsTo(User::class);
     }
-    
+
     public function preset() // write this in Student Model
     {
         return $this->hasMany(preset::class);
@@ -28,12 +28,12 @@ class pc_builder extends Model
     {
         return $this->hasOne(gpu::class);
     }
-    
+
     public function psu() // write this in Student Model
     {
         return $this->hasOne(psu::class);
     }
-    
+
     public function ram() // write this in Student Model
     {
         return $this->hasOne(ram::class);
@@ -50,6 +50,7 @@ class pc_builder extends Model
     }
 
     protected $fillable = [
+        'id',
         'cpu',
         'ram',
         'storage',
