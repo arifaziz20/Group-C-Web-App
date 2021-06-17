@@ -84,8 +84,8 @@
         <p style="margin: auto;text-align:center;">Put your budget below to get a recommedation from us or view the popular presets</p><br><br>
         <hr style="width:80%; height:0px; margin:0 auto;background-color:white;color:white;"><br>
         <form style="text-align: center;" method="post">
-            <input type="text" id="budget" name="budget"  placeholder="Put you budget here">
-            <input type="button" id="submit" name="submit" value="Submit" onclick="filterBudget()">
+            <input class="bg-black text-white" type="text" id="budget" name="budget"  placeholder="Put you budget here">
+            <input class="block my-0 mx-auto nline-flex items-center px-4 py-2 bg-black border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 my-5" type="button" id="submit" name="submit" value="Submit" onclick="filterBudget()">
 
         </form><br>
         <p style="text-align: center;">Presets </p><br>
