@@ -46,7 +46,7 @@ class RegisteredUserController extends Controller
         ]);
 
         $user->attachRole('user');  //use ('user') for default
-        //$user->attachRole($request->role_id);  //use ($request->role_id) to get from registration form
+        // $user->attachRole($request->role_id);  //use ($request->role_id) to get from registration form
 
         event(new Registered($user));
 
