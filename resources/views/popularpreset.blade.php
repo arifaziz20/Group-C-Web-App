@@ -97,7 +97,7 @@
                      <?php
                         $username = "root";
                         $password = "root";
-                        $database = "cp_db";
+                        $database = "cp4beginners";
                         $mysqli = new mysqli("localhost", $username, $password, $database);
                         $query = $GLOBALS['filteredquery'];
 
