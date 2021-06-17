@@ -128,8 +128,8 @@
 
                         foreach ($GLOBALS['filteredpresets'] as $count => $preset) {
 
-                            $field1name = "Build".$preset["id"];
-                                $field2name = "RM".$preset["total_price"];
+                            $field1name = "Build".$preset->id;
+                                $field2name = "RM".$preset->total_price;
 
                                 echo '<tr>
                                             <td >'.$field1name.'</td>
