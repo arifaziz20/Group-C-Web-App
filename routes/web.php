@@ -39,6 +39,7 @@ Route::get('/pcbuilder/addstorage/{id}', [BuilderController::class, 'addstorage'
 
 Route::post('/pcbuilder/save', [BuilderController::class, 'save']); // save preset
 Route::post('/pcbuilder/reset', [BuilderController::class, 'reset']); // reset preset
+Route::get('/popularpreset/budget', [PresetsController::class, 'budget']); // filter budget popular preset
 
 //For Users, based on whirling dropdown css exercise
 Route::get('/components/cpus', [ComponentController::class, 'cpu'])->name('listofCPU');
