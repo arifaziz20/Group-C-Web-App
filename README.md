@@ -299,7 +299,6 @@ Nowadays, users are overwhelmed by variety option of computer parts to be chosen
    <p>At the bottom of the list of component record, admin can create new record by pressing "NEW CPU RECORD". They will be redicted to a page that they can fill in the details for the new record. </p>
    <br>
  </ol>
->>>>>>> f569783021a4c47bbb6ce209875d803a7f0009df
    
 <h2>Challenges and Difficulties in Developing the Application</h2>
 <ol>
